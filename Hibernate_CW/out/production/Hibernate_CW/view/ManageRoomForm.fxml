@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageRoomFormController">
+   <children>
+      <Label layoutX="12.0" layoutY="12.0" prefHeight="32.0" prefWidth="190.0" text="Manage Rooms">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblRoom" layoutX="14.0" layoutY="250.0" prefHeight="341.0" prefWidth="762.0">
+        <columns>
+          <TableColumn fx:id="colRoomID" prefWidth="135.0" text="Room ID" />
+          <TableColumn fx:id="colRoomType" prefWidth="208.0" text="Room Type" />
+            <TableColumn fx:id="colKeyMoney" prefWidth="281.0" text="Key Money" />
+            <TableColumn fx:id="colQty" prefWidth="137.0" text="Room Qty" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtRoomId" labelFloat="true" layoutX="23.0" layoutY="90.0" promptText="Room ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtKeyMoney" labelFloat="true" layoutX="466.0" layoutY="90.0" promptText="Key Money">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtRoomType" labelFloat="true" layoutX="238.0" layoutY="90.0" promptText="Room Type">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtRoomQty" labelFloat="true" layoutX="23.0" layoutY="168.0" promptText="Room QTY">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSave" layoutX="277.0" layoutY="171.0" onAction="#saveOnAction" prefHeight="31.0" prefWidth="146.0" style="-fx-background-color: #80558c;" text="Save" textFill="#fcf9f9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="445.0" layoutY="171.0" onAction="#deleteOnAction" prefHeight="31.0" prefWidth="146.0" style="-fx-background-color: #80558c;" text="Delete" textFill="#f2efef">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

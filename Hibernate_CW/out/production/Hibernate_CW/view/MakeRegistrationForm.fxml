@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainContext" prefHeight="600.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MakeRegistrationFormController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="32.0" prefWidth="190.0" text="Make Registration">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddStudent" layoutX="618.0" layoutY="12.0" onAction="#addStudentOnAction" prefHeight="31.0" prefWidth="158.0" style="-fx-background-color: #80558c;" text="Add Student" textFill="#f5f4f4">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbStudentID" layoutX="14.0" layoutY="59.0" prefHeight="31.0" prefWidth="150.0" promptText="Select Student ID" />
+      <JFXTextField fx:id="txtStudentId" labelFloat="true" layoutX="14.0" layoutY="108.0" prefHeight="37.0" prefWidth="141.0" promptText="Student ID :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContactNo" labelFloat="true" layoutX="552.0" layoutY="110.0" prefHeight="37.0" prefWidth="200.0" promptText="Contact NO :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="365.0" layoutY="110.0" prefHeight="37.0" prefWidth="141.0" promptText="Address :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="189.0" layoutY="110.0" prefHeight="37.0" prefWidth="141.0" promptText="Name :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDob" labelFloat="true" layoutX="14.0" layoutY="174.0" prefHeight="37.0" prefWidth="200.0" promptText="DOB :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbGender" labelFloat="true" layoutX="242.0" layoutY="180.0" prefHeight="31.0" prefWidth="158.0" promptText="Gender" />
+      <JFXButton fx:id="btnSave" layoutX="450.0" layoutY="177.0" onAction="#studentSaveOnAction" prefHeight="37.0" prefWidth="85.0" style="-fx-background-color: #80558c;" text="Save" textFill="#f5f4f4">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="14.0" layoutY="230.0" prefHeight="0.0" prefWidth="769.0" />
+      <Label fx:id="lblresevation" layoutX="593.0" layoutY="247.0" prefHeight="31.0" prefWidth="158.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbRoomType" layoutX="14.0" layoutY="263.0" prefHeight="31.0" prefWidth="158.0" promptText="Select Room Type" />
+      <RadioButton fx:id="radBtnNow" layoutX="14.0" layoutY="347.0" mnemonicParsing="false" onAction="#setPaymentNowonAction" selected="true" text="Pay Now">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="payment" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radBtnLater" layoutX="141.0" layoutY="347.0" mnemonicParsing="false" onAction="#setPaymentLaterwonAction" text="Pay Later" toggleGroup="$payment">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="14.0" layoutY="316.0" prefHeight="21.0" prefWidth="219.0" text="Select payment method">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnRegConfirm" layoutX="20.0" layoutY="419.0" onAction="#regConfirmationOnAction" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: #80558c;" text="Register Confirm" textFill="#f5f4f4">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
